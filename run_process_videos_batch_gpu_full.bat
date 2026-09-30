@@ -16,8 +16,8 @@ if not exist "%~dp0env_torch_audio_gpu_1\Scripts\activate.bat" (
     exit /b 1
 )
 
-if not exist "%~dp0process_videos_batch_gpu_full.py" (
-    echo Error: process_videos_batch_gpu_full.py not found in:
+if not exist "%~dp0process_videos_batch_gpu_full_v3_yamnet.py" (
+    echo Error: process_videos_batch_gpu_full_v3_yamnet.py not found in:
     echo   %~dp0
     exit /b 1
 )
@@ -28,5 +28,5 @@ if errorlevel 1 (
     exit /b 1
 )
 
-python -u "%~dp0process_videos_batch_gpu_full.py" "%~1"
+python -u "%~dp0process_videos_batch_gpu_full_v3_yamnet.py" "%~1" "--ai"
 exit /b %ERRORLEVEL%
